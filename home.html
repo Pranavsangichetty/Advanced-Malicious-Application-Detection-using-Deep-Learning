@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Malicious Application Detection</title>
+    <style>
+        body {
+            background-image: url('../images/home-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Full height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            color: #00eaff;
+        }
+
+        /* Dropdown Styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.95);
+            min-width: 220px;
+            z-index: 1001;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px;
+            font-size: 16px;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background: #00eaff;
+            color: black;
+            border-radius: 3px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main Content Centering */
+        .main-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centering trick */
+            width: 80%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border-radius: 10px;
+        }
+
+        /* Title Styling */
+        .main-content h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        /* Description Styling */
+        .main-content p {
+            font-size: 20px;
+            width: 80%;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+            <a href="#">Detection</a>
+            <div class="dropdown-content">
+                <a href="file_scan.html">File Scan</a>
+                <a href="real_time_dashboard.html">Real-Time Dashboard</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Application</a>
+            <div class="dropdown-content">
+                <a href="threat_reports.html">Threat Reports</a>
+                <a href="upload_history.html">Upload History</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">About Us</a>
+            <div class="dropdown-content">
+                <a href="our_team.html">Our Team</a>
+                <a href="our_mission.html">Our Mission</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Help</a>
+            <div class="dropdown-content">
+                <a href="support.html">Support</a>
+                <a href="help_faq.html">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h1>Advanced Malicious<br>Application Detection<br>using Deep Learning</h1>
+            </div>
+</body>
+</html>
+
+
+

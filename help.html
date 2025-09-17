@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Module</title>
+    <style>
+        body {
+            background-image: url('../images/help-bg.jpg');
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            margin: 50px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Support</h1>
+        <p>If you need assistance, please contact our support team.</p>
+    </div>
+    <div class="container">
+        <h1>FAQ</h1>
+        <form id="feedbackForm">
+            <label for="feedback">Your FAQ:</label><br><br>
+            <textarea id="feedback" rows="5" cols="40" required></textarea><br><br>
+            <button type="submit">Submit FAQ</button>
+        </form>
+        <p id="feedbackResult"></p>
+    </div>
+    <script src="../js/help.js"></script>
+</body>
+</html>
