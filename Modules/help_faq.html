@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            background-image: url('../images/faq-bg.jpeg'); /* Change path to actual image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 70%;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        #faq-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #faq-container li {
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        #faq-container li strong {
+            color: #00eaff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div id="faq-container">
+            <ul>
+                <li><strong>Q1:</strong> What is the purpose of the file scan module?</li>
+                <li><strong>A1:</strong> The file scan module detects malicious files by analyzing patterns and behaviors.</li>
+
+                <li><strong>Q2:</strong> How does the dashboard display scan results?</li>
+                <li><strong>A2:</strong> The dashboard provides a visual representation of scanned files, threats detected, and action history.</li>
+
+                <li><strong>Q3:</strong> What file types can be scanned?</li>
+                <li><strong>A3:</strong> The system supports ZIP, RAR, EXE, PDF, DOCX, and various other file types.</li>
+
+                <li><strong>Q4:</strong> How does the application detect malware in ZIP files?</li>
+                <li><strong>A4:</strong> The application extracts ZIP contents and scans individual files using an antivirus engine.</li>
+
+                <li><strong>Q5:</strong> What happens when a virus is found in a ZIP file?</li>
+                <li><strong>A5:</strong> The system isolates the infected file and alerts the user for removal or further analysis.</li>
+
+                <li><strong>Q6:</strong> Can I manually rescan a file?</li>
+                <li><strong>A6:</strong> Yes, the dashboard allows users to reanalyze files with updated virus definitions.</li>
+
+                <li><strong>Q7:</strong> How is real-time scanning implemented?</li>
+                <li><strong>A7:</strong> The system continuously monitors file uploads and executes background scans.</li>
+
+                <li><strong>Q8:</strong> What security measures are in place for detected threats?</li>
+                <li><strong>A8:</strong> The system quarantines threats, logs the detection, and provides removal options.</li>
+
+                <li><strong>Q9:</strong> How does the application differentiate between a false positive and real threat?</li>
+                <li><strong>A9:</strong> It uses heuristic analysis and cross-references with a virus database.</li>
+
+                <li><strong>Q10:</strong> Does the file scanning module require an internet connection?</li>
+                <li><strong>A10:</strong> It can work offline but needs periodic updates for optimal performance.</li>
+
+                <li><strong>Q11:</strong> What types of threats can the system detect?</li>
+                <li><strong>A11:</strong> Viruses, trojans, worms, ransomware, spyware, and adware.</li>
+
+                <li><strong>Q12:</strong> How frequently is the virus definition database updated?</li>
+                <li><strong>A12:</strong> The database updates daily to include the latest threats.</li>
+
+                <li><strong>Q13:</strong> How does the system handle encrypted ZIP files?</li>
+                <li><strong>A13:</strong> Users are prompted to enter the password before scanning can proceed.</li>
+
+                <li><strong>Q14:</strong> Can the dashboard track past scan reports?</li>
+                <li><strong>A14:</strong> Yes, the dashboard maintains a history of scanned files and detected threats.</li>
+
+                <li><strong>Q15:</strong> What graphs are available on the dashboard?</li>
+                <li><strong>A15:</strong> Pie charts, bar graphs, and line charts display scan statistics and trends.</li>
+
+                <li><strong>Q16:</strong> Can multiple files be scanned simultaneously?</li>
+                <li><strong>A16:</strong> Yes, batch scanning is supported for efficiency.</li>
+
+                <li><strong>Q17:</strong> What is the accuracy of the scanning engine?</li>
+                <li><strong>A17:</strong> The engine maintains a 99% detection rate with minimal false positives.</li>
+
+                <li><strong>Q18:</strong> How does the system prioritize scanning tasks?</li>
+                <li><strong>A18:</strong> It uses a queue system based on file size and risk level.</li>
+
+                <li><strong>Q19:</strong> What programming language is used for the detection module?</li>
+                <li><strong>A19:</strong> The module is built using Python with AI-driven threat detection.</li>
+
+                <li><strong>Q20:</strong> Does the system integrate with third-party antivirus software?</li>
+                <li><strong>A20:</strong> Yes, it can work alongside external security tools for additional protection.</li>
+
+                <li><strong>Q21:</strong> How does the system log detected threats?</li>
+                <li><strong>A21:</strong> A detailed log is generated with timestamps, file paths, and threat descriptions.</li>
+
+                <li><strong>Q22:</strong> Can users download scan reports?</li>
+                <li><strong>A22:</strong> Yes, reports can be exported as PDF files.</li>
+
+                <li><strong>Q23:</strong> How does the system notify users about threats?</li>
+                <li><strong>A23:</strong> Users receive pop-up alerts and email notifications.</li>
+
+                <li><strong>Q24:</strong> Is there an option to schedule file scans?</li>
+                <li><strong>A24:</strong> Yes, users can set automatic scanning schedules.</li>
+
+                <li><strong>Q25:</strong> Can the system scan files in cloud storage?</li>
+                <li><strong>A25:</strong> Yes, integrations with Google Drive and Dropbox are available.</li>
+
+                <li><strong>Q26:</strong> Does the dashboard provide a summary of past scan statistics?</li>
+                <li><strong>A26:</strong> Yes, it includes a summary of threats detected over time.</li>
+
+                <li><strong>Q27:</strong> What is the retention period for scan logs?</li>
+                <li><strong>A27:</strong> Logs are retained for up to 6 months unless manually deleted.</li>
+
+                <li><strong>Q28:</strong> Can I whitelist trusted files?</li>
+                <li><strong>A28:</strong> Yes, files can be marked as safe to prevent repeated alerts.</li>
+
+                <li><strong>Q29:</strong> How does the AI-powered detection improve scanning?</li>
+                <li><strong>A29:</strong> AI helps identify emerging threats based on behavior analysis.</li>
+
+                <li><strong>Q30:</strong> How are detected threats categorized?</li>
+                <li><strong>A30:</strong> Threats are labeled as low, medium, or high risk.</li>
+
+                <!-- Additional FAQs can be added following the same format -->
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+

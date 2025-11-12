@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Scan</title>
+    <style>
+        body {
+            background-image: url('../images/filescan-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 90%;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #00eaff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #008cba;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function scanFile() {
+            const fileInput = document.getElementById('fileInput');
+            const resultDiv = document.getElementById('result');
+
+            if (fileInput.files.length > 0) {
+                resultDiv.innerHTML = 'Scanning...';
+                setTimeout(() => {
+                    let virusChance = Math.random() * 100; // Generate random infection percentage
+                    let message = '';
+
+                    if (virusChance > 30) { // Simulating virus detection if percentage > 30%
+                        let virusTypes = [
+                            { type: "Trojan Horse", solution: "Delete the file immediately and run a full antivirus scan." },
+                            { type: "Ransomware", solution: "Disconnect from the internet and restore files from a backup." },
+                            { type: "Spyware", solution: "Use anti-spyware software and change your passwords." },
+                            { type: "Worm", solution: "Remove the infected file and scan for network vulnerabilities." },
+                            { type: "Adware", solution: "Uninstall suspicious applications and use an ad-blocker." }
+                        ];
+
+                        let detectedVirus = virusTypes[Math.floor(Math.random() * virusTypes.length)];
+                        message = `<p style="color:red;">Threat Detected! Infection Rate: ${virusChance.toFixed(2)}%</p>
+                                   <p>Virus Type: <strong>${detectedVirus.type}</strong></p>
+                                   <p>Solution: ${detectedVirus.solution}</p>`;
+                    } else {
+                        message = `<p style="color:green;">No threats detected! Your file is safe.</p>`;
+                    }
+
+                    resultDiv.innerHTML = message;
+                }, 2000);
+            } else {
+                alert('Please select a file to scan.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>File Scan</h1>
+        <p>Select a file to scan for potential threats.</p>
+        <input type="file" id="fileInput">
+        <button onclick="scanFile()">Scan File</button>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

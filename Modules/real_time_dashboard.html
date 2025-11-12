@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-image: url('../images/dashboard-bg.jpg');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      margin: 50px auto;
+      width: 90%;
+      border-radius: 10px;
+    }
+    .chart-container {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Real-Time Dashboard</h1>
+    <p>Stay updated with the latest virus threats with various analyses below.</p>
+    
+    <div class="chart-container">
+      <h2>Threat Levels</h2>
+      <canvas id="chart1"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Monthly Threats Trend</h2>
+      <canvas id="chart2"></canvas>
+    </div>
+    <div class="chart-container">
+      <h2>Distribution of Threat Types</h2>
+      <canvas id="chart3"></canvas>
+    </div>
+        
+    <script>
+      // Chart 1: Bar Chart - Threat Levels
+      var ctx1 = document.getElementById('chart1').getContext('2d');
+      new Chart(ctx1, {
+          type: 'bar',
+          data: {
+              labels: ['Trojan', 'Worm', 'Spyware', 'Ransomware', 'Adware'],
+              datasets: [{
+                  label: 'Threat Levels',
+                  data: [12, 19, 7, 14, 10],
+                  backgroundColor: ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FFD733']
+              }]
+          },
+          options: {
+              responsive: true,
+              plugins: {
+                  title: {
+                      display: true,
+                      text: 'Threat Levels by Category'
+                  }
+              }
+          }
+      });
+
+      // Chart 2: Line Chart - Monthly Threats Trend
+      var ctx2 = document.getElementById('chart2').getContext('2d');
+      new Chart(ctx2, {
+          type: 'line',
+          data: {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+              datasets: [{
+                  label: 'Monthly Threats',
+                  data: [5, 10, 8, 12, 7],
+                  borderColor: '#FFA500',
+                  backgroundColor: 'rgba(255,165,0,0.5)',
+                  fill: true
+              }]
+          },
+          options: {
+              responsive: true,
+              plugins: {
+                  title: {
+                      display: true,
+                      text: 'Monthly Threats Trend'
+                  }
+              }
+          }
+      });
+
+      // Chart 3: Pie Chart - Distribution of Threat Types
+      var ctx3 = document.getElementById('chart3').getContext('2d');
+      new Chart(ctx3, {
+          type: 'pie',
+          data: {
+              labels: ['Trojan', 'Worm', 'Spyware', 'Ransomware', 'Adware'],
+              datasets: [{
+                  data: [15, 10, 5, 20, 8],
+                  backgroundColor: ['#E74C3C', '#2980B9', '#F1C40F', '#8E44AD', '#27AE60']
+              }]
+          },
+          options: {
+              responsive: true,
+              plugins: {
+                  title: {
+                      display: true,
+                      text: 'Threat Type Distribution'
+                  }
+              }
+          }
+      });
+    </script>
+  </div>
+</body>
+</html>
+
